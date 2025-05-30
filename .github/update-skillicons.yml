@@ -1,0 +1,77 @@
+name: Update Skill Icons
+
+on:
+  schedule:
+    - cron: '0 0 * * 1' # Every Monday at midnight UTC
+  workflow_dispatch: # Manual trigger
+  push:
+    branches: [ main ]
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Get repository languages
+        id: languages
+        run: |
+          # Get languages from GitHub API
+          LANGUAGES=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
+            "https://api.github.com/users/YuKARLO15/repos?per_page=100" | \
+            jq -r '.[].language' | grep -v null | sort | uniq)
+          
+          # Map languages to skillicons
+          ICONS=""
+          for lang in $LANGUAGES; do
+            case $lang in
+              "JavaScript") ICONS="$ICONS,js" ;;
+              "TypeScript") ICONS="$ICONS,ts" ;;
+              "Python") ICONS="$ICONS,py" ;;
+              "Java") ICONS="$ICONS,java" ;;
+              "C++") ICONS="$ICONS,cpp" ;;
+              "C") ICONS="$ICONS,c" ;;
+              "HTML") ICONS="$ICONS,html" ;;
+              "CSS") ICONS="$ICONS,css" ;;
+              "PHP") ICONS="$ICONS,php" ;;
+              "Go") ICONS="$ICONS,go" ;;
+              "Rust") ICONS="$ICONS,rust" ;;
+              "C#") ICONS="$ICONS,cs" ;;
+              "Kotlin") ICONS="$ICONS,kotlin" ;;
+              "Swift") ICONS="$ICONS,swift" ;;
+              "Dart") ICONS="$ICONS,dart" ;;
+              "Shell") ICONS="$ICONS,bash" ;;
+            esac
+          done
+          
+          # Remove leading comma
+          ICONS=${ICONS#,}
+          echo "icons=$ICONS" >> $GITHUB_OUTPUT
+
+      - name: Update README
+        run: |
+          # Create the new skillicons URL
+          SKILL_URL="https://skillicons.dev/icons?i=${{ steps.languages.outputs.icons }}"
+          
+          # Update README.md
+          sed -i "s|<!-- SKILLICONS -->.*<!-- /SKILLICONS -->|<!-- SKILLICONS --><img src=\"$SKILL_URL\" /><!-- /SKILLICONS -->|g" README.md
+
+      - name: Commit changes
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add README.md
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "🤖 Auto-update skill icons"
+            git push
+          fi

@@ -1,26 +1,38 @@
-<h1><a href="https://yukarlo15.github.io/">My Personal Portfolio</a></h1>
+<div align="center">
+    <h1>Hi, call me YuKARLO.</h1>
+    <p><a href="https://yukarlo15.github.io/">My Personal Portfolio</a></p>
+    <p>I am hehe</p>
+    <br/>
+    
+    <table>
+        <thead><td colspan="2"><b>Toolkit</b></td></thead>
+        <tbody>
+            <tr>
+                <td>Languages (Auto-Updated)</td>
+                <td><!-- SKILLICONS --><img src="https://skillicons.dev/icons?i=js,py,html,css" /><!-- /SKILLICONS --></td>
+            </tr>
+            <tr>
+                <td>Frameworks/Tools</td>
+                <td><img src="https://skillicons.dev/icons?i=react,nodejs,git,github,vscode,figma"/></td>
+            </tr>
+            <tr>
+                <td>Learning</td>
+                <td><img src="https://skillicons.dev/icons?i=docker,aws,mongodb,express"/></td>
+            </tr>
+        </tbody>
+    </table>
+    
+    <img src="https://komarev.com/ghpvc/?username=YuKARLO15&color=blueviolet&style=for-the-badge"/>
+</div>
 
-<a href="https://github.com/YuKARLO15?tab=repositories">
-    <img src="https://github-readme-stats.vercel.app/api/top-langs?username=YuKARLO15&theme=transparent&hide_border=true&locale=en" align="center"></img>
-</a>
-<a href="https://github.com/YuKARLO15">
-    <img src="https://github-readme-stats.vercel.app/api?username=YuKARLO15&count_private=true&show_icons=true&theme=transparent&hide_border=true&locale=en" align="center"></img><br/>
-    <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=YuKARLO15&theme=transparent" align="center"></img>
-</a>
+<hr/>
 
-<!--## Hi there 👋-->
-
-<!--
-**YuKARLO15/YuKARLO15** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+<div align="center">
+    <a href="https://github.com/YuKARLO15?tab=repositories">
+        <img src="https://github-readme-stats.vercel.app/api/top-langs?username=YuKARLO15&theme=transparent&hide_border=true&locale=en" align="center"/>
+    </a>
+    <a href="https://github.com/YuKARLO15">
+        <img src="https://github-readme-stats.vercel.app/api?username=YuKARLO15&count_private=true&show_icons=true&theme=transparent&hide_border=true&locale=en" align="center"/><br/>
+        <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=YuKARLO15&theme=transparent" align="center"/>
+    </a>
+</div>
