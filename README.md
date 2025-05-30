@@ -1,17 +1,17 @@
 <div align="center">
-    <h1>Hi, call me YuKARLO.</h1>
-    <p><a href="https://yukarlo15.github.io/">My Personal Portfolio</a></p>
+    <h1>Hi, call me Yuichiii or Karlo</h1>
+    <h1><a href="https://yukarlo15.github.io/">My Personal Portfolio</a></h1>
     <p>I am hehe</p>
     <br/>
     <table>
         <thead><td colspan="2"><b>Toolkit</b></td></thead>
         <tbody>
             <tr>
-                <td>Languages (Auto-Updated)</td>
+                <td>Languages</td>
                 <td><!-- SKILLICONS --><img src="https://skillicons.dev/icons?i=py,cs,html,js,ts,cpp" /><!-- /SKILLICONS --></td>
             </tr>
             <tr>
-                <td>Frameworks/Tools (Auto-Updated)</td>
+                <td>Frameworks/Tool</td>
                 <td><img src="https://skillicons.dev/icons?i=git,github,vscode,figma"/></td>
             </tr>
         </tbody>
