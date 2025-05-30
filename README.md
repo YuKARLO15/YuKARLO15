@@ -3,7 +3,6 @@
     <p><a href="https://yukarlo15.github.io/">My Personal Portfolio</a></p>
     <p>I am hehe</p>
     <br/>
-    
     <table>
         <thead><td colspan="2"><b>Toolkit</b></td></thead>
         <tbody>
@@ -17,7 +16,6 @@
             </tr>
         </tbody>
     </table>
-    
     <img src="https://komarev.com/ghpvc/?username=YuKARLO15&color=blueviolet&style=for-the-badge"/>
 </div>
 
