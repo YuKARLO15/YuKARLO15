@@ -12,12 +12,8 @@
                 <td><!-- SKILLICONS --><img src="https://skillicons.dev/icons?i=js,py,html,css" /><!-- /SKILLICONS --></td>
             </tr>
             <tr>
-                <td>Frameworks/Tools</td>
+                <td>Frameworks/Tools (Auto-Updated)</td>
                 <td><img src="https://skillicons.dev/icons?i=react,nodejs,git,github,vscode,figma"/></td>
-            </tr>
-            <tr>
-                <td>Learning</td>
-                <td><img src="https://skillicons.dev/icons?i=docker,aws,mongodb,express"/></td>
             </tr>
         </tbody>
     </table>

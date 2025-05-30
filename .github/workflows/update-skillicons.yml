@@ -2,8 +2,8 @@ name: Update Skill Icons
 
 on:
   schedule:
-    - cron: '0 0 * * 1' # Every Monday at midnight UTC
-  workflow_dispatch: # Manual trigger
+    - cron: '0 0 * * 1'
+  workflow_dispatch:
   push:
     branches: [ main ]
 
@@ -13,65 +13,90 @@ jobs:
     permissions:
       contents: write
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '18'
-
-      - name: Get repository languages
-        id: languages
+      - name: Get repository data
+        id: repo-data
         run: |
-          # Get languages from GitHub API
-          LANGUAGES=$(curl -s -H "Authorization: token ${{ secrets.GITHUB_TOKEN }}" \
-            "https://api.github.com/users/YuKARLO15/repos?per_page=100" | \
-            jq -r '.[].language' | grep -v null | sort | uniq)
+          # Get languages from all repos
+          REPO_DATA=$(curl -s "https://api.github.com/users/YuKARLO15/repos?per_page=100&type=all")
+          
+          # Extract languages and count them
+          LANGUAGES=$(echo "$REPO_DATA" | jq -r '.[].language' | grep -v null | sort | uniq -c | sort -nr)
           
           # Map languages to skillicons
-          ICONS=""
-          for lang in $LANGUAGES; do
-            case $lang in
-              "JavaScript") ICONS="$ICONS,js" ;;
-              "TypeScript") ICONS="$ICONS,ts" ;;
-              "Python") ICONS="$ICONS,py" ;;
-              "Java") ICONS="$ICONS,java" ;;
-              "C++") ICONS="$ICONS,cpp" ;;
-              "C") ICONS="$ICONS,c" ;;
-              "HTML") ICONS="$ICONS,html" ;;
-              "CSS") ICONS="$ICONS,css" ;;
-              "PHP") ICONS="$ICONS,php" ;;
-              "Go") ICONS="$ICONS,go" ;;
-              "Rust") ICONS="$ICONS,rust" ;;
-              "C#") ICONS="$ICONS,cs" ;;
-              "Kotlin") ICONS="$ICONS,kotlin" ;;
-              "Swift") ICONS="$ICONS,swift" ;;
-              "Dart") ICONS="$ICONS,dart" ;;
-              "Shell") ICONS="$ICONS,bash" ;;
+          LANG_ICONS=""
+          while IFS= read -r line; do
+            lang=$(echo "$line" | awk '{print $2}')
+            case "$lang" in
+              "JavaScript") LANG_ICONS="${LANG_ICONS}js," ;;
+              "TypeScript") LANG_ICONS="${LANG_ICONS}ts," ;;
+              "Python") LANG_ICONS="${LANG_ICONS}py," ;;
+              "HTML") LANG_ICONS="${LANG_ICONS}html," ;;
+              "CSS") LANG_ICONS="${LANG_ICONS}css," ;;
+              "Java") LANG_ICONS="${LANG_ICONS}java," ;;
+              "C++") LANG_ICONS="${LANG_ICONS}cpp," ;;
+              "C") LANG_ICONS="${LANG_ICONS}c," ;;
+              "PHP") LANG_ICONS="${LANG_ICONS}php," ;;
+              "Go") LANG_ICONS="${LANG_ICONS}go," ;;
+              "Rust") LANG_ICONS="${LANG_ICONS}rust," ;;
+              "C#") LANG_ICONS="${LANG_ICONS}cs," ;;
+              "Kotlin") LANG_ICONS="${LANG_ICONS}kotlin," ;;
+              "Swift") LANG_ICONS="${LANG_ICONS}swift," ;;
             esac
-          done
+          done <<< "$LANGUAGES"
           
-          # Remove leading comma
-          ICONS=${ICONS#,}
-          echo "icons=$ICONS" >> $GITHUB_OUTPUT
+          # Remove trailing comma and set default if empty
+          LANG_ICONS=${LANG_ICONS%,}
+          if [ -z "$LANG_ICONS" ]; then
+            LANG_ICONS="js,py,html,css"
+          fi
+          
+          # Auto-detect frameworks/tools based on repos
+          FRAMEWORK_ICONS=""
+          REPO_NAMES=$(echo "$REPO_DATA" | jq -r '.[].name' | tr '[:upper:]' '[:lower:]')
+          REPO_DESCRIPTIONS=$(echo "$REPO_DATA" | jq -r '.[].description // ""' | tr '[:upper:]' '[:lower:]')
+          REPO_TOPICS=$(echo "$REPO_DATA" | jq -r '.[].topics[]? // ""' | tr '[:upper:]' '[:lower:]')
+          
+          ALL_TEXT="$REPO_NAMES $REPO_DESCRIPTIONS $REPO_TOPICS"
+          
+          # Check for frameworks/tools
+          if echo "$ALL_TEXT" | grep -q "react"; then FRAMEWORK_ICONS="${FRAMEWORK_ICONS}react,"; fi
+          if echo "$ALL_TEXT" | grep -q "node\|nodejs"; then FRAMEWORK_ICONS="${FRAMEWORK_ICONS}nodejs,"; fi
+          if echo "$ALL_TEXT" | grep -q "express"; then FRAMEWORK_ICONS="${FRAMEWORK_ICONS}express,"; fi
+          if echo "$ALL_TEXT" | grep -q "vue"; then FRAMEWORK_ICONS="${FRAMEWORK_ICONS}vue,"; fi
+          if echo "$ALL_TEXT" | grep -q "angular"; then FRAMEWORK_ICONS="${FRAMEWORK_ICONS}angular,"; fi
+          if echo "$ALL_TEXT" | grep -q "django"; then FRAMEWORK_ICONS="${FRAMEWORK_ICONS}django,"; fi
+          if echo "$ALL_TEXT" | grep -q "flask"; then FRAMEWORK_ICONS="${FRAMEWORK_ICONS}flask,"; fi
+          if echo "$ALL_TEXT" | grep -q "bootstrap"; then FRAMEWORK_ICONS="${FRAMEWORK_ICONS}bootstrap,"; fi
+          if echo "$ALL_TEXT" | grep -q "tailwind"; then FRAMEWORK_ICONS="${FRAMEWORK_ICONS}tailwind,"; fi
+          
+          # Always include common tools
+          FRAMEWORK_ICONS="${FRAMEWORK_ICONS}git,github,vscode,figma"
+          
+          # Remove trailing comma
+          FRAMEWORK_ICONS=${FRAMEWORK_ICONS%,}
+          
+          echo "lang_icons=$LANG_ICONS" >> $GITHUB_OUTPUT
+          echo "framework_icons=$FRAMEWORK_ICONS" >> $GITHUB_OUTPUT
 
       - name: Update README
         run: |
-          # Create the new skillicons URL
-          SKILL_URL="https://skillicons.dev/icons?i=${{ steps.languages.outputs.icons }}"
+          # Update languages
+          sed -i 's|<!-- SKILLICONS --><img src="[^"]*" /><!-- /SKILLICONS -->|<!-- SKILLICONS --><img src="https://skillicons.dev/icons?i=${{ steps.repo-data.outputs.lang_icons }}" /><!-- /SKILLICONS -->|g' README.md
           
-          # Update README.md
-          sed -i "s|<!-- SKILLICONS -->.*<!-- /SKILLICONS -->|<!-- SKILLICONS --><img src=\"$SKILL_URL\" /><!-- /SKILLICONS -->|g" README.md
+          # Update frameworks/tools (find the line and replace the skillicons part)
+          sed -i '/Frameworks\/Tools/,/<\/tr>/ s|<img src="https://skillicons.dev/icons?i=[^"]*"/>|<img src="https://skillicons.dev/icons?i=${{ steps.repo-data.outputs.framework_icons }}"/>|' README.md
 
       - name: Commit changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add README.md
-          if git diff --staged --quiet; then
-            echo "No changes to commit"
-          else
-            git commit -m "🤖 Auto-update skill icons"
+          if ! git diff --staged --quiet; then
+            git commit -m "🤖 Auto-update skill icons [skip ci]"
             git push
+          else
+            echo "No changes to commit"
           fi
