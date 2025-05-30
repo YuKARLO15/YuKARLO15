@@ -9,7 +9,7 @@
         <tbody>
             <tr>
                 <td>Languages (Auto-Updated)</td>
-                <td><!-- SKILLICONS --><img src="https://skillicons.dev/icons?i=js,py,html,css" /><!-- /SKILLICONS --></td>
+                <td><!-- SKILLICONS --><img src="https://skillicons.dev/icons?i=cs,cpp,html,js,py,ts" /><!-- /SKILLICONS --></td>
             </tr>
             <tr>
                 <td>Frameworks/Tools</td>
