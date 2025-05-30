@@ -8,11 +8,11 @@
         <tbody>
             <tr>
                 <td>Languages (Auto-Updated)</td>
-                <td><!-- SKILLICONS --><img src="https://skillicons.dev/icons?i=cs,cpp,html,js,py,ts" /><!-- /SKILLICONS --></td>
+                <td><!-- SKILLICONS --><img src="https://skillicons.dev/icons?i=py,cs,html,js,ts,cpp" /><!-- /SKILLICONS --></td>
             </tr>
             <tr>
                 <td>Frameworks/Tools (Auto-Updated)</td>
-                <td><img src="https://skillicons.dev/icons?i=react,nodejs,git,github,vscode,figma"/></td>
+                <td><img src="https://skillicons.dev/icons?i=git,github,vscode,figma"/></td>
             </tr>
         </tbody>
     </table>
