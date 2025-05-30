@@ -17,7 +17,44 @@
         </tbody>
     </table>
     <img src="https://komarev.com/ghpvc/?username=YuKARLO15&color=blueviolet&style=for-the-badge"/>
+## 🎵 My YouTube Music Profile
+
+<div align="center">
+
+<table>
+<tr>
+<td align="center" width="50%">
+
+**🎤 Channel**  
+[`@yuotosaka9092`](https://music.youtube.com/@yuotosaka9092)
+
+</td>
+<td align="center" width="50%">
+
+**🎶 Platform**  
+`Music Profile`
+
+</td>
+</tr>
+<tr>
+<td align="center" colspan="2">
+
+**⏰ Profile Updated**  
+`May 30, 2025`
+
+</td>
+</tr>
+</table>
+
+<br>
+
+[![YouTube Music Profile](https://img.shields.io/badge/YouTube%20Music-@yuotosaka9092-red?style=for-the-badge&logo=youtube-music&logoColor=white)](https://music.youtube.com/@yuotosaka9092)
+
+[![Listen on YouTube Music](https://img.shields.io/badge/🎵_Listen_Along-FF0000?style=for-the-badge&logo=youtube-music&logoColor=white)](https://music.youtube.com/@yuotosaka9092)
+
 </div>
+
+---</div>
 
 <hr/>
 
