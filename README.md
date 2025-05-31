@@ -148,16 +148,45 @@
     <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=YuKARLO15&theme=transparent"/>
 </div>
 
-## 🎯 Coding Activity
-
+## 📈 Contribution Heatmap
 <div align="center">
-    <!-- WakaTime stats (if you set it up) -->
-    <img src="https://github-readme-stats.vercel.app/api/wakatime?username=YuKARLO15&theme=transparent&hide_border=true&layout=compact"/>
+    <img src="https://ghchart.rshah.org/blueviolet/YuKARLO15" alt="YuKARLO15's GitHub Contribution Heatmap" />
 </div>
+
+## 🎯 Coding Stats
+<div align="center">
+    <table>
+    <tr>
+    <td align="center">
+    **📝 Recent Activity**  
+    ![Code Time](https://img.shields.io/badge/Code%20Time-Student%20Developer-blue?style=flat-square&logo=visual-studio-code)
+    </td>
+    <td align="center">
+    **⚡ Productivity**  
+    ![Focus](https://img.shields.io/badge/Focus-Learning%20%26%20Building-green?style=flat-square&logo=target)
+    </td>
+    </tr>
+    <tr>
+    <td align="center">
+    **🔥 Streak**  
+    ![Streak](https://img.shields.io/badge/Current%20Streak-Building%20Daily-orange?style=flat-square&logo=fire)
+    </td>
+    <td align="center">
+    **🎯 Goals**  
+    ![Goals](https://img.shields.io/badge/2025%20Goal-Full%20Stack%20Dev-purple?style=flat-square&logo=rocket)
+    </td>
+    </tr>
+    </table>
+</div>
+
+## ⚡ Developer Status
+![Coding](https://img.shields.io/badge/Coding-Python%20%7C%20JavaScript-blue?style=for-the-badge&logo=code)
+![Learning](https://img.shields.io/badge/Learning-React%20%7C%20Node.js-green?style=for-the-badge&logo=book)
+![Building](https://img.shields.io/badge/Building-Portfolio%20Projects-orange?style=for-the-badge&logo=tools)
 
 ## 💡 Random Dev Quote
 <div align="center">
-    <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark&quote=Code%20is%20like%20humor.%20When%20you%20have%20to%20explain%20it,%20it's%20bad."/>
+    <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark"/>
 </div>
 
 ## 🐍 Contribution Snake
