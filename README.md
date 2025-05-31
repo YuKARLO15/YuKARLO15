@@ -63,7 +63,7 @@
 <td align="center" colspan="2">
 
 **⏰ Last Updated**  
-`Auto-updated daily`
+`Updated: May 31, 2025`
 
 </td>
 </tr>
