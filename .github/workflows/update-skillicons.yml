@@ -1,14 +1,15 @@
-name: Update Skill Icons
+name: Update Profile Content
 
 on:
   schedule:
-    - cron: '0 0 * * 1'
+    - cron: '0 0 * * 1' # Weekly on Monday
+    - cron: '0 12 * * *' # Daily at noon for music profile
   workflow_dispatch:
   push:
     branches: [ main ]
 
 jobs:
-  update-readme:
+  update-profile:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -81,21 +82,27 @@ jobs:
           echo "lang_icons=$LANG_ICONS" >> $GITHUB_OUTPUT
           echo "framework_icons=$FRAMEWORK_ICONS" >> $GITHUB_OUTPUT
 
-      - name: Update README
+      - name: Update YouTube Music Profile
+        run: |
+          # Update the music profile timestamp
+          CURRENT_DATE=$(date +"%B %d, %Y")
+          sed -i "s/\`Auto-updated daily\`/\`Updated: $CURRENT_DATE\`/g" README.md
+
+      - name: Update Skill Icons
         run: |
           # Update languages
           sed -i 's|<!-- SKILLICONS --><img src="[^"]*" /><!-- /SKILLICONS -->|<!-- SKILLICONS --><img src="https://skillicons.dev/icons?i=${{ steps.repo-data.outputs.lang_icons }}" /><!-- /SKILLICONS -->|g' README.md
           
-          # Update frameworks/tools (find the line and replace the skillicons part)
-          sed -i '/Frameworks\/Tools/,/<\/tr>/ s|<img src="https://skillicons.dev/icons?i=[^"]*"/>|<img src="https://skillicons.dev/icons?i=${{ steps.repo-data.outputs.framework_icons }}"/>|' README.md
+          # Update frameworks/tools
+          sed -i 's|<!-- FRAMEWORKS --><img src="[^"]*"/><!-- /FRAMEWORKS -->|<!-- FRAMEWORKS --><img src="https://skillicons.dev/icons?i=${{ steps.repo-data.outputs.framework_icons }}"/><!-- /FRAMEWORKS -->|g' README.md
 
       - name: Commit changes
         run: |
           git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
+          git config --local user.name "Profile Update Bot"
           git add README.md
           if ! git diff --staged --quiet; then
-            git commit -m "🤖 Auto-update skill icons [skip ci]"
+            git commit -m "🤖 Auto-update profile content [skip ci]"
             git push
           else
             echo "No changes to commit"
