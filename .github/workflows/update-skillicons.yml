@@ -26,6 +26,10 @@ jobs:
           # Extract languages and count them
           LANGUAGES=$(echo "$REPO_DATA" | jq -r '.[].language' | grep -v null | sort | uniq -c | sort -nr)
           
+          # Count total repos and stars
+          TOTAL_REPOS=$(echo "$REPO_DATA" | jq length)
+          TOTAL_STARS=$(echo "$REPO_DATA" | jq '[.[].stargazers_count] | add')
+          
           # Map languages to skillicons
           LANG_ICONS=""
           while IFS= read -r line; do
@@ -81,12 +85,14 @@ jobs:
           
           echo "lang_icons=$LANG_ICONS" >> $GITHUB_OUTPUT
           echo "framework_icons=$FRAMEWORK_ICONS" >> $GITHUB_OUTPUT
+          echo "total_repos=$TOTAL_REPOS" >> $GITHUB_OUTPUT
+          echo "total_stars=$TOTAL_STARS" >> $GITHUB_OUTPUT
 
       - name: Update YouTube Music Profile
         run: |
           # Update the music profile timestamp
           CURRENT_DATE=$(date +"%B %d, %Y")
-          sed -i "s/\`Auto-updated daily\`/\`Updated: $CURRENT_DATE\`/g" README.md
+          sed -i "s/\`Updated: .*\`/\`Updated: $CURRENT_DATE\`/g" README.md
 
       - name: Update Skill Icons
         run: |
