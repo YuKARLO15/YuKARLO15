@@ -154,35 +154,47 @@
 </div>
 
 ## 🎯 Coding Stats
+
 <div align="center">
-    <table>
-    <tr>
-    <td align="center">
-    **📝 Recent Activity**  
-    ![Code Time](https://img.shields.io/badge/Code%20Time-Student%20Developer-blue?style=flat-square&logo=visual-studio-code)
-    </td>
-    <td align="center">
-    **⚡ Productivity**  
-    ![Focus](https://img.shields.io/badge/Focus-Learning%20%26%20Building-green?style=flat-square&logo=target)
-    </td>
-    </tr>
-    <tr>
-    <td align="center">
-    **🔥 Streak**  
-    ![Streak](https://img.shields.io/badge/Current%20Streak-Building%20Daily-orange?style=flat-square&logo=fire)
-    </td>
-    <td align="center">
-    **🎯 Goals**  
-    ![Goals](https://img.shields.io/badge/2025%20Goal-Full%20Stack%20Dev-purple?style=flat-square&logo=rocket)
-    </td>
-    </tr>
-    </table>
+<table>
+<tr>
+<td align="center" width="50%">
+
+**📝 Recent Activity**  
+<img src="https://img.shields.io/badge/Code%20Time-Student%20Developer-blue?style=flat-square&logo=visual-studio-code"/>
+
+</td>
+<td align="center" width="50%">
+
+**⚡ Productivity**  
+<img src="https://img.shields.io/badge/Focus-Learning%20%26%20Building-green?style=flat-square&logo=target"/>
+
+</td>
+</tr>
+<tr>
+<td align="center" width="50%">
+
+**🔥 Streak**  
+<img src="https://img.shields.io/badge/Current%20Streak-Building%20Daily-orange?style=flat-square&logo=fire"/>
+
+</td>
+<td align="center" width="50%">
+
+**🎯 Goals**  
+<img src="https://img.shields.io/badge/2025%20Goal-Full%20Stack%20Dev-purple?style=flat-square&logo=rocket"/>
+
+</td>
+</tr>
+</table>
 </div>
 
 ## ⚡ Developer Status
-![Coding](https://img.shields.io/badge/Coding-Python%20%7C%20JavaScript-blue?style=for-the-badge&logo=code)
-![Learning](https://img.shields.io/badge/Learning-React%20%7C%20Node.js-green?style=for-the-badge&logo=book)
-![Building](https://img.shields.io/badge/Building-Portfolio%20Projects-orange?style=for-the-badge&logo=tools)
+
+<div align="center">
+    <img src="https://img.shields.io/badge/Coding-Python%20%7C%20JavaScript-blue?style=for-the-badge&logo=code"/>
+    <img src="https://img.shields.io/badge/Learning-React%20%7C%20Node.js-green?style=for-the-badge&logo=book"/>
+    <img src="https://img.shields.io/badge/Building-Portfolio%20Projects-orange?style=for-the-badge&logo=tools"/>
+</div>
 
 ## 💡 Random Dev Quote
 <div align="center">
@@ -196,11 +208,6 @@
         <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/YuKARLO15/YuKARLO15/output/snake.svg">
         <img alt="github contribution grid snake animation" src="https://raw.githubusercontent.com/YuKARLO15/YuKARLO15/output/snake.svg">
     </picture>
-</div>
-
-## 📈 GitHub Metrics
-<div align="center">
-    <img src="https://metrics.lecoq.io/YuKARLO15?template=classic&base.header=0&base.activity=0&base.community=0&base.repositories=0&base.metadata=0&languages=1&habits=1&achievements=1&languages.limit=8&languages.sections=most-used&languages.colors=github&languages.threshold=0%25&habits.from=200&habits.days=14&habits.facts=true&habits.charts=false&achievements.threshold=C&achievements.secrets=true&achievements.display=detailed&achievements.limit=0&config.timezone=Asia%2FManila" width="100%">
 </div>
 
 ---
