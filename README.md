@@ -132,7 +132,7 @@
     <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=dark"/>
 </div>
 
-## 🐍 Contribution Graph
+## 🐍 Contribution Snake
 <div align="center">
     <img src="https://raw.githubusercontent.com/YuKARLO15/YuKARLO15/output/snake.svg" alt="Snake animation" />
 </div>
