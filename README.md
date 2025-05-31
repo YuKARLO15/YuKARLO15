@@ -63,7 +63,7 @@
 <td align="center" width="50%">
 
 **🎤 Music Channel**  
-[`@yuotosaka9092`](https://music.youtube.com/@yuotosaka9092)
+[`@yuotosaka9092`](https://music.youtube.com/channel/UCe-O1tDC1dQWchkghbz9Brg)
 
 </td>
 <td align="center" width="50%">
@@ -83,8 +83,8 @@
 </tr>
 </table>
 
-[![YouTube Music Profile](https://img.shields.io/badge/YouTube%20Music-@yuotosaka9092-red?style=for-the-badge&logo=youtube-music&logoColor=white)](https://music.youtube.com/@yuotosaka9092)
-[![Listen Along](https://img.shields.io/badge/🎵_Check_My_Playlists-FF0000?style=for-the-badge&logo=youtube-music&logoColor=white)](https://music.youtube.com/@yuotosaka9092)
+[![YouTube Music Profile](https://img.shields.io/badge/YouTube%20Music-@yuotosaka9092-red?style=for-the-badge&logo=youtube-music&logoColor=white)](https://music.youtube.com/channel/UCe-O1tDC1dQWchkghbz9Brg)
+[![Listen Along](https://img.shields.io/badge/🎵_Check_My_Playlists-FF0000?style=for-the-badge&logo=youtube-music&logoColor=white)](https://music.youtube.com/channel/UCe-O1tDC1dQWchkghbz9Brg)
 
 </div>
 <!-- MUSIC_PROFILE_END -->
