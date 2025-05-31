@@ -8,8 +8,8 @@
     <!-- Contact badges -->
     <p>
         <a href="https://yukarlo15.github.io/"><img src="https://img.shields.io/badge/Portfolio-000000?style=for-the-badge&logo=About.me&logoColor=white"/></a>
-        <a href="mailto:your-email@example.com"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
-        <a href="https://linkedin.com/in/yourprofile"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
+        <a href="mailto:karlorobertwagan@proton.me"><img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white"/></a>
+        <a href="https://www.linkedin.com/in/karlo-robert-wagan-01b68b303/"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/></a>
     </p>
     <br/>
     <!-- Enhanced Toolkit Table -->
@@ -142,6 +142,5 @@
 <div align="center">
     <h3>💖 Thanks for visiting my profile!</h3>
     <p>Feel free to reach out if you want to collaborate on projects or just chat about tech!</p>
-    
     <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer"/>
 </div>
