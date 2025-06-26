@@ -27,7 +27,7 @@
         <tbody>
             <tr>
                 <td>Languages</td>
-                <td><!-- SKILLICONS --><img src="https://skillicons.dev/icons?i=py,cs,html,js,ts,cpp" /><!-- /SKILLICONS --></td>
+                <td><!-- SKILLICONS --><img src="https://skillicons.dev/icons?i=py,cs,html,ts,js,cpp" /><!-- /SKILLICONS --></td>
             </tr>
             <tr>
                 <td>Frameworks/Tools</td>
@@ -77,7 +77,7 @@
 <td align="center" colspan="2">
 
 **⏰ Last Updated**  
-`Updated: June 25, 2025`
+`Updated: June 26, 2025`
 
 </td>
 </tr>
