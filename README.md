@@ -77,7 +77,7 @@
 <td align="center" colspan="2">
 
 **⏰ Last Updated**  
-`Updated: November 30, 2025`
+`Updated: December 01, 2025`
 
 </td>
 </tr>
