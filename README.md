@@ -31,7 +31,7 @@
             </tr>
             <tr>
                 <td>Frameworks/Tools</td>
-                <td><!-- FRAMEWORKS --><img src="https://skillicons.dev/icons?i=git,github,vscode,figma"/><!-- /FRAMEWORKS --></td>
+                <td><!-- FRAMEWORKS --><img src="https://skillicons.dev/icons?i=vue,git,github,vscode,figma"/><!-- /FRAMEWORKS --></td>
             </tr>
             <tr>
                 <td>Currently Learning</td>
@@ -77,7 +77,7 @@
 <td align="center" colspan="2">
 
 **⏰ Last Updated**  
-`Updated: April 08, 2026`
+`Updated: April 09, 2026`
 
 </td>
 </tr>
